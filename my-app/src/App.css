@@ -1,0 +1,73 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e0e0e0; /* Màu nền sáng hơn cho sự tương phản tốt hơn */
+}
+
+.calculator {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 260px; /* Kích thước máy tính được điều chỉnh để chứa các nút */
+  background-color: #fff;
+}
+
+.display {
+  background-color: #333;
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: right;
+  padding: 20px;
+  border-radius: 10px 10px 0 0;
+  box-sizing: border-box;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px; /* Khoảng cách giữa các nút */
+}
+
+.buttons button {
+  font-size: 1.5rem;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.buttons button:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.buttons button:active {
+  background-color: #e0e0e0;
+}
+
+.buttons button:nth-last-child(-n+2) {
+  background-color: #f8d7da; /* Màu nền cho các nút "C" và "=" */
+  color: #721c24;
+  font-weight: bold;
+}
+
+.buttons button:nth-child(4n) {
+  background-color: #cce5ff; /* Màu nền cho các nút phép toán */
+  color: #004085;
+  font-weight: bold;
+}
+
+.buttons button:nth-child(1) {
+  background-color: #d6d6d6; /* Màu nền cho nút "C" */
+}
+
+.buttons button:nth-child(2) {
+  background-color: #d6d6d6; /* Màu nền cho nút "DEL" */
+}
+
+.buttons button:nth-child(3) {
+  background-color: #d6d6d6; /* Màu nền cho nút "0" */
+}
